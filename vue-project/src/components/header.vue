@@ -1,12 +1,15 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">{{ message }}</div>
+
 <script>
-export default {
-  data() {
-    return {
-      title: `Shopping Cart`,
-    };
-  },
-};
+  const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!'
+      }
+    }
+  }).mount('#app')
 </script>
-<template>
-  <div class="header">{{ title }}</div>
-</template>
