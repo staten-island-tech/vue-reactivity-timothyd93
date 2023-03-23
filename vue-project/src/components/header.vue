@@ -3,9 +3,8 @@
 <div id="app">{{ message }}</div>
 
 <script>
-  const { createApp } = Vue
 
-  createApp({
+  const createApp = createApp({
     data() {
       return {
         message: 'Hello Vue!'
