@@ -12,6 +12,7 @@ const products = [
 <template>
   <div class="home">
     <img v-for="product in products" :src="product.img">
-  <li  v-for="product in products"> {{ product.name }}</li>
+  <p  v-for="product in products"> {{ product.name }}</p>
+  <button v-for="product in products"></button>
   </div>
 </template>
