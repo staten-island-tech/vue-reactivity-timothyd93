@@ -1,4 +1,9 @@
 <script setup>
+
+
+function addPrice(x=0) {
+  x+this.product.price
+}
 const products = [
   { name: "apple", price: 2.0, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn4jedgV_XfyLOBuegpPVJQRtwFViVI7dDWw&usqp=CAU"},
   { name: "orange", price: 3.0, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYsNDHoyYYbfJPLaz9lRPuMEoMQUsR3JdN2A&usqp=CAU" },
@@ -10,9 +15,10 @@ const products = [
 </script>
 
 <template>
-  <div class="home">
-    <img v-for="product in products" :src="product.img">
-  <p  v-for="product in products"> {{ product.name }}</p>
-  <button v-for="product in products"></button>
+<p v-text="x"></p>
+  <div  v-for="product in products" class="cards">
+    <img :src="product.img">
+  <p> {{ product.name }}</p>
+  <button @click="addPrice()">{{product.price}}</button>
   </div>
 </template>
