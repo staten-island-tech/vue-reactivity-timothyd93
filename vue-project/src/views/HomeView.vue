@@ -12,16 +12,24 @@
       />
       <button id="button" v-on:click="addPrice(fruit.price)"> Add to Cart</button>
     </div>
+    <!-- <div v-for="fruit in fruits">
+      <List  
+      :key="fruit.name"
+      :name ="fruit.name"
+      />
+    </div> -->
   </div>  
   </main>
 </template>
 
 <script>
 import Card from "../components/products.vue"
+import List from "../components/shoppinglist.vue"
 export default {
   name: "array",
   components: {
     Card,
+    List,
   },
   data() {
     return {
@@ -40,7 +48,10 @@ export default {
     addPrice(fruits) {
     this.total += fruits
     console.log(this.total)
-    }
+    },
+    shoppingList(){
+    
+    },
   },
 };
 </script>
