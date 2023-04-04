@@ -47,7 +47,6 @@ export default {
   methods: {
     addPrice(fruits) {
     this.total += fruits
-    console.log(this.total)
     },
     shoppingList(){
     
